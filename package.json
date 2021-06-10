@@ -1,5 +1,5 @@
 {
-    "name": "bootstrap-buttons",
+    "name": "bootstrap-js-buttons",
     "version": "1.0.0",
     "description": "Create Bootstrap buttons using CSS variables via Javascript",
     "main": "index.js",
@@ -12,7 +12,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/getmindspun/bootstrap-buttons.git"
+        "url": "git+https://github.com/getmindspun/bootstrap-js-buttons.git"
     },
     "keywords": [
         "Javascript",
@@ -27,9 +27,9 @@
     "author": "Mindspun",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/getmindspun/bootstrap-buttons/issues"
+        "url": "https://github.com/getmindspun/bootstrap-js-buttons/issues"
     },
-    "homepage": "https://github.com/getmindspun/bootstrap-buttons#readme",
+    "homepage": "https://github.com/getmindspun/bootstrap-js-buttons#readme",
     "devDependencies": {
         "express": "^4.17.1",
         "parseurl": "^1.3.3",
