@@ -1,7 +1,7 @@
 <div align="center">
-<h1>bootstrap-js-buttons</h1>
-<h4>Create Bootstrap button variants in Javascript.</h4>
-![Bootstrap button variants](img/buttons.png?raw=true "Bootstrap button variants")
+  <h1>bootstrap-js-buttons</h1>
+  <h4>Create Bootstrap button variants in Javascript.</h4>
+  <img src="img/buttons.png" alt="Bootstrap button variants"</img>
 </div>
 
 <div align="center">
