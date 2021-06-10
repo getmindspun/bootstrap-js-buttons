@@ -25,10 +25,12 @@
     <div>
         <label class="h1 mb-3" for="color">Select a color</label>
         <div><input style="width:235px;" id="color" type="color" value="#FF1A75"></div>
-        <button type="button" class="btn btn-accent-solid mx-2 my-3" style="width:100px" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-accent-solid mx-2 my-3" style="width:100px" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
             Solid
         </button>
-        <button type="button" class="btn btn-accent-outline mx-2 my-3" style="width:100px" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-accent-outline mx-2 my-3" style="width:100px" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
             Outline
         </button>
     </div>
@@ -36,55 +38,42 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Bootstrap JS Button</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        You clicked a button variant that was create by Javascript!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Bootstrap JS Button</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                You clicked a button variant that was create by Javascript!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"
-        async defer></script>
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-js-buttons@latest/dist/bootstrap-js-buttons.min.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-js-buttons@latest/dist/bootstrap-js-buttons.min.js"></script>
 
 <script>
-    // https://stackoverflow.com/a/9899701/6849315
-    function docReady(fn) {
-        // see if DOM is already available
-        if (document.readyState === "complete" || document.readyState === "interactive") {
-            // call on next available tick
-            setTimeout(fn, 1);
-        } else {
-            document.addEventListener("DOMContentLoaded", fn);
-        }
-    }
+    bs.debug();
 
-    docReady(function () {
-        bs.debug();
+    document.querySelector("#color").addEventListener("input", function (event) {
+        var color = event.target.value;
+        document.documentElement.style.setProperty("--accent-color", color);
 
-        document.querySelector("#color").addEventListener("input", function (event) {
-            var color = event.target.value;
-            document.documentElement.style.setProperty("--accent-color", color);
-
-            bs.buttonVariant('.btn-accent-solid', color);
-            bs.buttonOutlineVariant('.btn-accent-outline', color);
-        }, false);
+        bs.buttonVariant('.btn-accent-solid', color);
+        bs.buttonOutlineVariant('.btn-accent-outline', color);
+    }, false);
 
 
-        bs.buttonVariant('.btn-accent-solid', '#FF1A75');
-        bs.buttonOutlineVariant('.btn-accent-outline', '#FF1A75');
-    });
+    bs.buttonVariant('.btn-accent-solid', '#FF1A75');
+    bs.buttonOutlineVariant('.btn-accent-outline', '#FF1A75');
 
 </script>
 </body>
