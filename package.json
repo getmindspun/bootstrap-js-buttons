@@ -1,7 +1,7 @@
 {
     "name": "bootstrap-js-buttons",
     "version": "1.0.1",
-    "description": "Create Bootstrap buttons using CSS variables via Javascript",
+    "description": "Create Bootstrap buttons using dynamic styles via Javascript",
     "main": "index.js",
     "scripts": {
         "build": "webpack",
